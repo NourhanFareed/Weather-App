@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E202B;
+}
+
+/* Genral Classes */
+
+.bg-icon {
+    background-color: #1E202B;
+}
+
+.tomFore-bg {
+    background-color: #222531 !important;
+}
+
+.contentFore-bg {
+    background-color: #323544 !important;
+}
+
+.contentTomFore-bg {
+    background-color: #262936 !important;
+}
+
+.maincolor {
+    color: #009AD8;
+}
+
+p {
+    color: rgb(234, 234, 234);
+}
+
+/* ----------------------------------------------------- Start of Navbar -------------------------------------------------- */
+
+.container {
+    width: 80%;
+}
+
+.navbar {
+    padding: 50px 0;
+    background-color: #1E202B;
+}
+
+.navbar-brand {
+    vertical-align: middle;
+}
+
+.logo-H1 {
+    line-height: 0px;
+}
+
+small {
+    font-size: 12px;
+    line-height: 0px;
+}
+
+.nav-link {
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.active {
+    border: 2px solid #009AD8 !important;
+    color: #009AD8 !important;
+}
+
+.active:hover {
+    opacity: 0.8;
+}
+
+.nav-link:hover {
+    border: 2px solid #009AD8;
+    color: #009AD8 !important;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* ----------------------------------------------------- End of Navbar -------------------------------------------------- */
+/* ----------------------------------------------------- Start of main Section -------------------------------------------------- */
+/* .main-Sec {} */
+
+.banner-div {
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: 50px;
+    background-image: url(../images/banner.png);
+}
+
+
+.input-div {
+    top: 70px;
+}
+
+.searchInput {
+    background-color: #1E202B;
+    color: white;
+    border: none;
+
+}
+
+.searchInput::placeholder {
+    color: rgb(208, 207, 207);
+}
+
+/* .searchInput:focus {
+    background-color: #1E202B;
+} */
+
+.submit {
+    right: 5px;
+    top: 4px;
+    font-size: 16px;
+    background-color: #009AD8;
+    border: none;
+    color: white;
+    padding: 12px 40px;
+}
+
+.forecastDiv {
+    position: relative;
+    /* bottom: 190px; */
+    overflow: hidden;
+    margin-top: -150px;
+    margin-bottom: 50px;
+
+}
+
+
+.divHeader {
+    background-color: #2D303D;
+
+}
+
+.divHeader p {
+    color: rgb(218, 218, 218);
+}
+
+.foreContent {
+    overflow: hidden;
+}
+
+.foreContent h2 {
+    font-size: 65px;
+    color: white;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.foreContent h5 {
+    color: rgb(218, 218, 218);
+}
+
+.forecastItem p {
+    color: rgb(218, 218, 218);
+}
+
+/* .fore-details {
+    display: none;
+} */
+
+.notFound {
+    display: none;
+}
+
+.forecastInfo img {
+    display: none;
+}
+
+.sunIcon {
+    width: 50px;
+    /* position: relative; */
+    margin-top: 0px;
+}
+
+/* ----------------------------------------------------- End of main Section -------------------------------------------------- */
+/* ----------------------------------------------------- Start of Footer -------------------------------------------------- */
+
+/* .footer{
+    overflow: hidden;
+} */
+
+.social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-item:hover {
+    background-color: #009AD8;
+
+}
+
+.social-item a {
+    color: #009AD8;
+    font-size: 18px;
+}
+
+.social-item:hover a {
+    color: white;
+}
+
+.copyRight {
+    font-size: 13px;
+}
+
+/* ----------------------------------------------------- End of Footer -------------------------------------------------- */

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="CSS/all.min.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/weather.css">
+        <link rel="shortcut icon" href="images/cloud.png" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center justify-content-center " href="#"><img
+                        src="images/logo@2x.png" width="64" height="38" class="me-4" alt="Cloud Logo">
+                    <div class="logo-title ">
+                        <h1 class="logo-H1 fs-6 fw-bold">Weather</h1>
+                        <small class="">tagline goes here</small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-between align-items-center">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active border  rounded-pill py-1 px-3" aria-current="page"
+                                href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link py-1 text-white px-3" href="#">News</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link py-1 text-white px-3" href="#">Live cameras</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link py-1 text-white px-3" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link py-1 text-white px-3" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+
+        <p id="demo"></p>
+        <main class="main-Sec " id="mainSec">
+            <div class="banner-div">
+                <div class="container py-3">
+                    <form class="input-div position-relative" id="inputDiv">
+                        <input type="text" class="searchInput w-100 rounded-pill py-3 ps-4" id="searchInput"
+                            placeholder="Find your location...">
+                        <input type="submit" class="submit position-absolute rounded-pill" id="searchBtn"
+                            value="Submit">
+
+                    </form>
+                </div>
+            </div>
+            <div class="list-content text-white">
+                <div class="forecastDiv mb-5 " id="forecastDiv">
+                    <div class="container w-75">
+                        <div class="row gx-0 w-100">
+                            <div class="col-lg-4 col-md-12 contentFore-bg foreCast">
+                                <div class="foreCastItem">
+                                    <div class="divHeader d-flex justify-content-between align-items-center px-2 pt-1">
+                                        <p class="dayNa"></p>
+                                        <p class="dayEl"></p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="foreContent  d-flex justify-content-between align-items-lg-start align-items-sm-center flex-column">
+                                    <div class="foreDetails ps-4">
+                                        <h5 class="cityHide mt-2 mx-sm-auto mx-lg-0 d-flex justify-content-sm-center justify-content-lg-start align-items-center"
+                                            id="city"></h5>
+                                        <h2 class="temperature pt-3 my-3" id="temperature"></h2>
+                                        <img src=""
+                                            class="forecastImg night-img my-3 mx-sm-auto mx-lg-0 d-flex justify-content-sm-center justify-content-lg-start align-items-center"
+                                            id="forecastImg">
+                                        <p class="forecastStatus text-capitalize maincolor text-lg-start text-sm-center mb-0"
+                                            id="forecastStatus"></p>
+                                        <div
+                                            class="forecastInfo d-flex justify-content-lg-start justify-content-md-center align-items-center">
+                                            <div
+                                                class="forecastItem d-flex justify-content-center align-items-center me-2">
+                                                <img class="me-1" src="images/icon-umberella.png" alt="Umberlla Icon">
+                                                <p class="humidity ms-1 pt-3" id="humidity"></p>
+                                            </div>
+                                            <div
+                                                class="forecastItem d-flex justify-content-center align-items-center me-2">
+                                                <img class="me-1" src="images/icon-wind.png" alt="Umberlla Icon">
+                                                <p class="wind ms-1 pt-3" id="wind"></p>
+                                            </div>
+                                            <div
+                                                class="forecastItem d-flex justify-content-center align-items-center me-2">
+                                                <img class="me-1" src="images/icon-compass.png" alt="Umberlla Icon">
+                                                <p class="windDirection ms-1 pt-3" id="windDirection"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="notFound">
+                                        <div
+                                            class="box mx-auto text-center d-flex justify-content-center align-items-center flex-column">
+
+                                            <img src="images/hand-drawn-no-data-illustration_23-2150584283.jpg"
+                                                class="errorImg rounded w-50" id="errorImg" alt="">
+                                            <p class="error pt-2 fs-4" id="error">Oops! Location not found!</p>
+                                            </img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 contentTomFore-bg foreCast">
+                                <div class="foreCastItem ">
+                                    <div
+                                        class="divHeader tomFore-bg d-flex justify-content-center align-items-center px-2 pt-1">
+                                        <p class="dayNa">Monday</p>
+                                    </div>
+                                    <div class="foreContent ">
+                                        <div class="foreDetails p-5">
+                                            <img src=""
+                                                class="forecastImg w-25 sunIcon mx-auto d-flex justify-content-center align-items-center">
+                                            <h3 class="maxTemp text-white text-center fw-bold"></h3>
+                                            <p class="minTemp text-center fw-bold"></p>
+                                            <p class="forecastStatus text-capitalize maincolor text-center mb-2"></p>
+                                        </div>
+                                    </div>
+                                    <div class="notFound">
+                                        <div
+                                            class="box mx-auto text-center d-flex justify-content-center align-items-center flex-column">
+
+                                            <img src="images/hand-drawn-no-data-illustration_23-2150584283.jpg"
+                                                class="errorImg rounded w-50" id="errorImg" alt="">
+                                            <p class="error pt-2 fs-4" id="error">Oops! Location not found!</p>
+                                            </img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 contentFore-bg foreCast ">
+                                <div class="foreCastItem">
+                                    <div class="divHeader d-flex justify-content-center align-items-center px-2 pt-1">
+                                        <p class="dayNa">Teusday</p>
+                                    </div>
+                                    <div class="foreContent ">
+                                        <div class="foreDetails p-5">
+                                            <img src=""
+                                                class="forecastImg w-25 sunIcon mx-auto d-flex justify-content-center align-items-center">
+                                            <h3 class="maxTemp text-white text-center fw-bold"></h3>
+                                            <p class="minTemp text-center fw-bold"></p>
+                                            <p class="forecastStatus text-capitalize maincolor text-center mb-2"></p>
+                                        </div>
+                                    </div>
+                                    <div class="notFound">
+                                        <div
+                                            class="box mx-auto text-center d-flex justify-content-center align-items-center flex-column">
+                                            <img src="images/hand-drawn-no-data-illustration_23-2150584283.jpg"
+                                                class="errorImg rounded w-50" id="errorImg" alt="">
+
+                                            <p class="error pt-2 fs-4" id="error">Oops! Location not found!</p>
+                                            </img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+        <footer class="footer contentFore-bg position-relative">
+            <div class="container pt-4 pb-4">
+                <div class="row d-flex justify-content-lg-around justify-content-sm-start align-items-center pt-3">
+                    <div class="col-lg-8 col-sm-12 mb-sm-2 mb-lg-0">
+                        <div class="">
+                            <form class="inMail-div position-relative" id="inputDiv">
+                                <input type="email" class="searchInput form-control w-100 rounded-pill py-3 ps-4"
+                                    id="subscribeInput" placeholder="Enter your email to subscribe...">
+                                <input type="submit" class="submit position-absolute rounded-pill" id="submit"
+                                    value="Subscribe">
+
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 ">
+                        <div class="social-div mt-lg-0 mt-sm-3">
+                            <ul
+                                class="list-unstyled d-flex justify-content-lg-center justify-content-sm-start align-items-center text-center">
+                                <li class="social-item bg-icon rounded-circle py-2 px-2">
+                                    <a href="#" class="text-center mx-auto"><i class="fa-brands fa-facebook-f"></i></a>
+                                </li>
+                                <li class="social-item bg-icon rounded-circle py-2 px-2">
+                                    <a href="#" class="text-center mx-auto"><i class="fa-brands fa-twitter"></i></a>
+                                </li>
+                                <li class="social-item bg-icon rounded-circle py-2 px-2">
+                                    <a href="#" class="text-center mx-auto"><i class="fa-brands fa-google"></i></a>
+                                </li>
+                                <li class="social-item bg-icon rounded-circle py-2 px-2">
+                                    <a href="#" class="text-center mx-auto"><i class="fa-brands fa-pinterest"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <p class="copyRight pt-4">Copyright 2014 Company name. Designed by Themezy. All rights
+                        reserved</p>
+                </div>
+            </div>
+
+        </footer>
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="JS/bootstrap.bundle.min.js"></script>
+        <script src="JS/weather.js"></script>
+    </body>
+
+</html>
